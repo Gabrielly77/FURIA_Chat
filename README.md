@@ -27,7 +27,7 @@ FURIA-Chat ├── index.html (Página inicial do projeto) ├── main.html
 
 ## Como Usar  
 1. Clone ou baixe o repositório:  
-`bash
+bash
 git clone https://github.com/seu-usuario/chat-furia.git
 2. Abra o arquivo index.html em seu navegador.
 3. Comece a interagir com a Pantera Furiosa e explore as opções do chat!
