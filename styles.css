@@ -1,3 +1,4 @@
+/* Estilização geral */
 body {
   background: linear-gradient(135deg, #0d0d0d, #2c2c2c);
   color: #ffffff;
@@ -6,51 +7,55 @@ body {
   padding: 0;
 }
 
+/* Estrutura do chat */
 .chat-container {
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
-  background: rgba(30, 30, 30, 0.8);
+  background: rgba(30, 30, 30, 0.9);
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
-  backdrop-filter: blur(10px);
+  text-align: center;
 }
 
+/* Título do chat */
 .chat-container h2 {
   font-family: 'Bebas Neue', sans-serif;
   color: #ffcc00;
-  text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
+  text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 40px #ffcc00;
   font-size: 26px;
   text-transform: uppercase;
-  text-align: center;
-  animation: fadeIn 1s ease-in-out;
 }
 
+/* Banner do chat */
+.banner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50px;
+}
+
+/* Área de mensagens */
 .chat-box {
-  background: rgba(44, 44, 44, 0.9);
   padding: 15px;
   height: 300px;
   overflow-y: auto;
   border-radius: 10px;
   margin-bottom: 15px;
-  backdrop-filter: blur(5px);
+  background: rgba(20, 20, 20, 0.9);
 }
 
+/* Estilização do texto */
 .chat-box p {
   margin: 5px 0;
 }
 
-/* Estiliza os nomes no chat */
+/* Destacar nomes */
 .chat-box p strong {
-  color: black; /* Define a cor do nome "Pantera Furiosa" como preto */
+  color: #ffcc00;
 }
 
-/* Garante que o primeiro strong dentro da mensagem (o nome do usuário) fique amarelo */
-.chat-box p strong:first-child {
-  color: #ffcc00; /* Define a cor do nome "Você" como amarelo */
-}
-
-.chat-input {
+/* Campo de entrada */
+chat-input {
   display: flex;
 }
 
@@ -64,6 +69,7 @@ body {
   margin-right: 5px;
 }
 
+/* Correção do botão de envio */
 button {
   padding: 10px 15px;
   border: none;
@@ -71,21 +77,59 @@ button {
   background: linear-gradient(135deg, #ffcc00, #e6b800);
   color: #000000;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(255, 204, 0, 0.3);
-  transition: transform 0.2s ease-in-out, box-shadow 0.3s;
+  transition: transform 0.2s ease-in-out;
 }
 
 button:hover {
   background: linear-gradient(135deg, #e6b800, #d1a600);
   transform: scale(1.1);
-  box-shadow: 0 6px 10px rgba(255, 204, 0, 0.5);
 }
 
-.banner img {
-  display: block;
-  width: 100%;
+/* 🔥 Correção: Permite envio ao pressionar "Enter" */
+#user-input:focus {
+  outline: none;
+}
+
+/* 🔹 Ajuste da imagem no main.html */
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* 🔥 Brilho no título */
+.info-container h1 {
+  color: #ffcc00;
+  font-size: 36px;
+  text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 40px #ffcc00;
+}
+
+/* Área de informações */
+.info-container {
+  width: 50%;
+  text-align: left;
+}
+
+/* Área da imagem */
+.image-container {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+/* 🔥 Ajuste para aumentar e centralizar a imagem */
+.image-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 140%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
-  animation: fadeIn 1.5s ease-in-out;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
 }
