@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat De La FURIA 🦊</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="chat-container">
+    <header>
+      <h2>Chat De La FURIA 🦊</h2>
+      <div class="banner">
+        <img src="https://e3ba6e8732e83984.cdn.gocache.net/uploads/image/file/3315649/large_e16c13ca11a88104cde6804ada716d03.png" alt="Banner FURIA" />
+      </div>
+    </header>
+
+    <section class="chat-content">
+      <div class="chat-box" id="chat-box"></div>
+      <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Digite sua mensagem..." onkeypress="handleKeyPress(event)" />
+        <button onclick="sendMessage()">Enviar</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
