@@ -39,7 +39,7 @@ function detectLanguage(message) {
   } else if (portugueseGreetings.some(greeting => lowerMessage.includes(greeting))) {
     return "pt";
   } else {
-    return currentLanguage; // Mantém o idioma atual se não detectar
+    return currentLanguage;
   }
 }
 
@@ -49,19 +49,16 @@ function processMessage(message) {
 
   if (state === "initial") {
     if (["oi", "olá", "ola", "bom dia", "boa tarde", "boa noite", "hello", "hi", "good morning", "good afternoon", "good evening"].some(greeting => lowerMessage.includes(greeting))) {
-      const greeting = currentLanguage === "pt" ? "Olá! Qual é o seu nome?" : "Hello! What's your name?";
-      appendMessage("Pantera Furiosa", greeting);
+      appendMessage("Pantera Furiosa", currentLanguage === "pt" ? "Olá! Qual é o seu nome?" : "Hello! What's your name?");
       state = "awaiting_name";
     } else {
-      const prompt = currentLanguage === "pt" ? "Olá! Para começarmos, por favor, diga 'oi'." : "Hello! To start, please say 'hi'.";
-      appendMessage("Pantera Furiosa", prompt);
+      appendMessage("Pantera Furiosa", currentLanguage === "pt" ? "Olá! Para começarmos, por favor, diga 'oi'." : "Hello! To start, please say 'hi'.");
     }
   } else if (state === "awaiting_name") {
     userName = message;
-    const welcome = currentLanguage === "pt"
-      ? `Prazer em conhecê-lo, ${userName}! Como posso ajudá-lo hoje?`
-      : `Nice to meet you, ${userName}! How can I assist you today?`;
-    appendMessage("Pantera Furiosa", welcome);
+    appendMessage("Pantera Furiosa", currentLanguage === "pt" 
+      ? `Prazer em conhecê-lo, ${userName}! Como posso ajudá-lo hoje?` 
+      : `Nice to meet you, ${userName}! How can I assist you today?`);
     showOptions();
     state = "chatting";
   } else if (state === "chatting") {
@@ -103,18 +100,16 @@ function processMessage(message) {
         appendMessage("Pantera Furiosa", players);
         break;
       default:
-        const defaultMsg = currentLanguage === "pt"
-          ? "Desculpe, não entendi. Você pode digitar:\n1 - Próximos jogos\n2 - Torcida\n3 - Estatísticas\n4 - Informações do time\n5 - FURIA fe\n6 - Partida ao vivo\n7 - Jogadores da FURIA"
-          : "Sorry, I didn't understand. You can type:\n1 - Upcoming matches\n2 - Cheering\n3 - Statistics\n4 - Team information\n5 - FURIA fe\n6 - Live match\n7 - FURIA players";
-        appendMessage("Pantera Furiosa", defaultMsg);
+        showOptions();
     }
   }
 }
 
 function showOptions() {
   const options = currentLanguage === "pt"
-    ? "Escolha uma opção:\n1 - Próximos jogos\n2 - Torcida\n3 - Estatísticas\n4 - Informações do time\n5 - FURIA fe\n6 - Partida ao vivo\n7 - Jogadores da FURIA"
-    : "Choose an option:\n1 - Upcoming matches\n2 - Cheering\n3 - Statistics\n4 - Team information\n5 - FURIA fe\n6 - Live match\n7 - FURIA players";
+    ? "📌 1 - Próximos Jogos\n📌 2 - Torcida\n📌 3 - Estatísticas\n📌 4 - Informações do Time\n📌 5 - Furia Fé\n📌 6 - Partida ao Vivo\n📌 7 - Jogadores da Furia"
+    : "📌 1 - Upcoming Matches\n📌 2 - Cheering\n📌 3 - Statistics\n📌 4 - Team Information\n📌 5 - FURIA fe\n📌 6 - Live Match\n📌 7 - FURIA Players";
+
   appendMessage("Pantera Furiosa", options);
 }
 
@@ -122,6 +117,7 @@ function fetchUpcomingMatches() {
   const matchInfo = currentLanguage === "pt"
     ? "Próximo jogo: FURIA vs The MongolZ em 10 de maio de 2025 às 01:00 (MD3) pelo PGL Astana 2025."
     : "Upcoming match: FURIA vs The MongolZ on May 10, 2025 at 01:00 (BO3) for PGL Astana 2025.";
+
   appendMessage("Pantera Furiosa", matchInfo);
 }
 
@@ -129,6 +125,8 @@ function fetchTeamStats() {
   const statsMessage = currentLanguage === "pt"
     ? "Estatísticas recentes da FURIA: Rating 2.1: 1.05, K/D: 1.02"
     : "Recent statistics of FURIA: Rating 2.1: 1.05, K/D: 1.02";
+
   appendMessage("Pantera Furiosa", statsMessage);
 }
+
 
