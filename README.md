@@ -52,5 +52,7 @@ Melhorar animações e efeitos visuais do chat.
 
 Criado por Gabrielly Gonçalves.
 
+vídeo do projetinho: https://youtu.be/Kekf2-owgoc
+
 
 
