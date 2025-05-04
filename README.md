@@ -1,4 +1,7 @@
 # FURIA_Chat
+<p align="center">
+  <img src="https://e3ba6e8732e83984.cdn.gocache.net/uploads/image/file/3315649/large_e16c13ca11a88104cde6804ada716d03.png" alt="Banner FURIA" width="600"/>
+</p>
 
 # Chat Interativo FURIA
 
