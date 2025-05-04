@@ -39,6 +39,24 @@ Um chat interativo para fãs da FURIA, time de CS:GO, com estatísticas, próxim
 
 
 ---
+## Tecnologias Utilizadas:
+- HTML5
+- CSS3
+- JavaScript
+
+---
+
+## Como Contribuir:
+Faça um fork deste repositório.
+
+1. Crie uma branch para sua feature (git checkout -b minha-feature).
+
+2. Faça commit das suas mudanças (git commit -am 'Adicionando nova funcionalidade').
+
+3. Envie para o repositório (git push origin minha-feature).
+
+4. Abra um pull request para que possamos revisar suas contribuições
+
 
 ##  Instalação e Uso
 
@@ -47,20 +65,5 @@ git clone https://github.com/seu-usuario/chat-furia.git
 
 Depois, abra o arquivo index.html em um navegador de sua escolha.
 
-### Tecnologias Utilizadas:
-- HTML5
+---
 
-- CSS3
-
-- JavaScript
-
-## Como Contribuir:
-Faça um fork deste repositório.
-
-Crie uma branch para sua feature (git checkout -b minha-feature).
-
-Faça commit das suas mudanças (git commit -am 'Adicionando nova funcionalidade').
-
-Envie para o repositório (git push origin minha-feature).
-
-Abra um pull request para que possamos revisar suas contribuições
