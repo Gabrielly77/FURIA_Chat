@@ -2,76 +2,75 @@
     font-family: 'FURIA';
     src: url('caminho/para/FURIA.ttf') format('truetype');
   }
-  
+
   body {
     background-color: #121212;
-    color: #FFFFFF;
+    color: #ffffff;
     font-family: 'FURIA', sans-serif;
     margin: 0;
     padding: 0;
   }
-  
+
   .chat-container {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #1E1E1E;
+    background-color: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   }
-  
+
   .chat-container h2 {
     text-align: center;
-    color: #FFCC00;
-    text-shadow: 0 0 10px #FFCC00, 0 0 20px #FFCC00, 0 0 30px #FFCC00;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
   }
-  
+
   .chat-box {
-    background-color: #2C2C2C;
+    background-color: #2c2c2c;
     padding: 15px;
     height: 300px;
     overflow-y: auto;
     border-radius: 5px;
     margin-bottom: 15px;
   }
-  
+
   .chat-box p {
     margin: 5px 0;
   }
-  
+
   .chat-input {
     display: flex;
   }
-  
+
   #user-input {
     flex: 1;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #3A3A3A;
-    color: #FFFFFF;
+    background-color: #3a3a3a;
+    color: #ffffff;
     margin-right: 5px;
   }
-  
+
   button {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #FFCC00;
+    background-color: #ffcc00;
     color: #000000;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out;
   }
-  
+
   button:hover {
     background-color: #e6b800;
     transform: scale(1.05);
   }
-  
+
   .banner img {
     width: 100%;
     height: auto;
     border-radius: 10px;
   }
-  
